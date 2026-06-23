@@ -1,0 +1,11 @@
+implementation,run,n_events,runtime_seconds,events_per_second
+Python full-history workflow,1,200000,0.89902,222464.46130230694
+Python full-history workflow,2,200000,1.059115,188836.90628496432
+Python full-history workflow,3,200000,1.046268,191155.61213761676
+Python full-history workflow,4,200000,1.080819,185044.8595000643
+Python full-history workflow,5,200000,1.020211,196037.87843887197
+C++ compute-only event loop,1,200000,0.013045,15331544.653123803
+C++ compute-only event loop,2,200000,0.01643,12172854.534388313
+C++ compute-only event loop,3,200000,0.016341,12239153.050608898
+C++ compute-only event loop,4,200000,0.013815,14477017.734346725
+C++ compute-only event loop,5,200000,0.01627,12292562.999385372
