@@ -176,3 +176,16 @@ This is a research and educational simulator, not a production trading system. I
 * Add latency-aware quote updates and cancellations.
 * Build a matched Python compute-only benchmark for fairer C++ comparisons.
 * Evaluate policies on historical quote and trade data.
+  ## Runtime Benchmark
+
+The repository includes a separate performance benchmark for 200,000 simulated market events.
+
+| Implementation | Benchmark Scope                                         |   Mean Runtime | Runtime Std. Dev. | Relative Workflow Speed |
+| -------------- | ------------------------------------------------------- | -------------: | ----------------: | ----------------------: |
+| Python         | Full simulation workflow with event-history recording   | 1.0046 seconds |    0.0742 seconds |                    1.0× |
+| C++17          | Compute-only quote, fill, inventory, and PnL event loop | 0.0146 seconds |    0.0009 seconds |                   68.9× |
+
+![Runtime benchmark](results/runtime_benchmark.png)
+
+The current comparison is intentionally labeled as a workflow benchmark rather than a fully matched language benchmark: the Python implementation records full event histories for analysis, while the C++ implementation currently executes only the compute-focused event loop. A future version will add a matched Python compute-only benchmark for a stricter C++ versus Python comparison.
+
